@@ -4,8 +4,9 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         connect: {
-            example: {
+            server: {
                 port: 8000,
+                // livereload: true,
                 base: '../'
             }
         },
@@ -50,6 +51,13 @@ module.exports = function(grunt) {
                 options: {
                     nospawn: true
                 }
+            },
+            templates: {
+                files: ['**/*.html'], // which files to watch
+                tasks: ['ngtemplates'],
+                options: {
+                    nospawn: true
+                }
             }
         }
     });
@@ -62,6 +70,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-connect');
 
     // Default task(s).
-    grunt.registerTask('default', ['less', 'connect:example']);
+    grunt.registerTask('default', ['less', 'ngtemplates', 'connect:server', 'watch']);
 
 };
