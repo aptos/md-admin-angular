@@ -7425,7 +7425,7 @@ button.close {
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-mask-image: -webkit-radial-gradient(circle, #ffffff 100%, #000000 100%);
+  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 }
 .waves-button,
 .waves-button:hover,
@@ -14331,7 +14331,7 @@ body.login-content:before {
 .wall-img-preview .wip-item:first-child:nth-last-child(4),
 .wall-img-preview .wip-item:first-child:nth-last-child(4) ~ div:not(:last-child),
 .wall-img-preview .wip-item:first-child:nth-last-child(5),
-.wall-img-preview .wip-item:first-child:nth-last-child(5) ~ div:not( :nth-last-of-type(-n+2)),
+.wall-img-preview .wip-item:first-child:nth-last-child(5) ~ div:not(:nth-last-of-type(-n+2)),
 .wall-img-preview .wip-item:first-child:nth-last-child(6),
 .wall-img-preview .wip-item:first-child:nth-last-child(6) ~ div,
 .wall-img-preview .wip-item:first-child:nth-last-child(7) ~ div:nth-last-of-type(-n+3) {
@@ -14343,7 +14343,7 @@ body.login-content:before {
   padding-bottom: 40%;
 }
 .wall-img-preview .wip-item:first-child:nth-last-child(7),
-.wall-img-preview .wip-item:first-child:nth-last-child(7) ~ div:not( :nth-last-of-type(-n+3)),
+.wall-img-preview .wip-item:first-child:nth-last-child(7) ~ div:not(:nth-last-of-type(-n+3)),
 .wall-img-preview .wip-item:first-child:nth-last-child(n+8),
 .wall-img-preview .wip-item:first-child:nth-last-child(n+8) ~ div {
   width: 25%;

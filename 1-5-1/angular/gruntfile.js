@@ -3,6 +3,12 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        connect: {
+            example: {
+                port: 8000,
+                base: '../'
+            }
+        },
         less: {
             development: {
                 options: {
@@ -39,7 +45,8 @@ module.exports = function(grunt) {
         watch: {
             styles: {
                 files: ['less/**/*.less'], // which files to watch
-                tasks: ['less', 'csssplit'],
+                // tasks: ['less', 'csssplit'],
+                tasks: ['less'],
                 options: {
                     nospawn: true
                 }
@@ -49,11 +56,12 @@ module.exports = function(grunt) {
 
     // Load the plugin that provides the "less" task.
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-csssplit');
+    // grunt.loadNpmTasks('grunt-csssplit');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-angular-templates');
+    grunt.loadNpmTasks('grunt-connect');
 
     // Default task(s).
-    grunt.registerTask('default', ['less']);
+    grunt.registerTask('default', ['less', 'connect:example']);
 
 };
