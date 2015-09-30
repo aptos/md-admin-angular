@@ -5,14 +5,13 @@ Base style-guide for material design with angularjs. To serve from your local ma
     cd 1-5-1
     npm install
     
-add dev dependencies
-
-    npm install grunt-contrib-less --save-dev
-    npm install grunt-contrib-watch --save-dev
-    npm install grunt-angular-templates --save-dev
+Using gulp at the moment
+    gulp lint
+    gulp sass
+    gulp scripts
     
-create css from less files, update templates cache file, start server:
-
-    grunt
+Automatically lint and minify scripts, create sass on changes
+    gulp watch
     
-in your browser, open: http://localhost:8000
+or do them all at once and end in watch
+    gulp
