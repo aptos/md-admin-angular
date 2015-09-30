@@ -19,7 +19,7 @@
         @include transition-duration(250ms);
 
         @media (max-width: $screen-xs-max) {
-            height: ~"calc(100% - 58px)";
+            height: calc(100% - 58px);
             @include translate3d(-240px, 58px, 0);
             @include opacity(0);
             z-index: 1;

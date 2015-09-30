@@ -7,8 +7,8 @@ $font-icon-md:              'Material-Design-Iconic-Font';
 /*
  * Grid System
  */
-$container-tablet:             ~"calc(100% - ${grid-gutter-width})";
-$container-desktop:            ~"calc(100% - ${grid-gutter-width})";
+$container-tablet:             calc(100% - $grid-gutter-width);
+$container-desktop:            calc(100% - $grid-gutter-width);
 
 
 /* Typography + Scaffolding + Links */

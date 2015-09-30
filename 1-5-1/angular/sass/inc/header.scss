@@ -163,7 +163,7 @@
     
     @media (max-width: $screen-xs-max) {
         .dropdown-menu-lg {
-            width: ~"calc(100% - 28px)" !important;
+            width: calc(100% - 28px) !important;
         }
         
         .dropdown-menu {
@@ -214,7 +214,7 @@
         content: "";
         position: absolute;
         width: 100%;
-        height: ~"calc(100% - 70px)";
+        height: calc(100% - 70px);
         background: url(../img/notifications.png) no-repeat center;
         @include transition(all);
         @include transition-duration(400ms);
@@ -265,7 +265,7 @@
         }
         
         @media (max-width: $screen-xs-max) {
-            width: ~"calc(100% - 60px)";
+            width: calc(100% - 60px);
         }
     }
     

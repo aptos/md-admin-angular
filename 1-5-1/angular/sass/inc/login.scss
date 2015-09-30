@@ -29,7 +29,7 @@
 
     @media (max-width: $screen-xs-max) {
         padding: 15px 35px 25px 20px;
-        width: ~"calc(100% - 60px)";
+        width: calc(100% - 60px);
     }
 
     .checkbox {

@@ -90,7 +90,7 @@ body {
             
             & > .container {
                 @media (min-width: $screen-lg-min) {
-                    width: ~"calc(100% - 30px)";
+                    width: calc(100% - 30px);
                 }
             }
         }
