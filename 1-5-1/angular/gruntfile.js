@@ -32,16 +32,16 @@ module.exports = function(grunt) {
             },
         },
         ngtemplates: {
-          materialAdmin: {
-            src: ['template/**.html', 'template/**/**.html'],
-            dest: 'js/templates.js',
-            options: {
-              htmlmin: {
-                    collapseWhitespace: true,
-                    collapseBooleanAttributes: true
-              }
-            } 
-          }
+            materialAdmin: {
+                src: ['template/**.html', 'template/**/**.html'],
+                dest: 'js/templates.js',
+                options: {
+                    htmlmin: {
+                        collapseWhitespace: true,
+                        collapseBooleanAttributes: true
+                    }
+                } 
+            }
         },
         watch: {
             styles: {
