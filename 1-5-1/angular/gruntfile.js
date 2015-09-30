@@ -2,68 +2,83 @@ module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-        connect: {
-            server: {
-                port: 8000,
+      pkg: grunt.file.readJSON('package.json'),
+      connect: {
+        server: {
+          port: 8000,
                 // livereload: true,
                 base: '../'
-            }
-        },
-        less: {
-            development: {
+              }
+            },
+            less: {
+              development: {
                 options: {
-                    paths: ["css"]
+                  paths: ["css"]
                 },
                 files: {
-                    "css/app.css": "less/app.less",
+                  "css/app.css": "less/app.less",
                 },
                 cleancss: true
-            }
-        },
-        csssplit: {
-            your_target: {
+              }
+            },
+            sass: {
+              dist: {
+                files: [{
+                  expand: true,
+                  cwd: 'sass',
+                  src: ['*.scss'],
+                  dest: 'css',
+                  ext: '.css'
+                }]
+              }
+            },
+            csssplit: {
+              your_target: {
                 src: ['css/app.css'],
                 dest: 'css/app.min.css',
                 options: {
-                    maxSelectors: 4095,
-                    suffix: '.'
+                  maxSelectors: 4095,
+                  suffix: '.'
                 }
+              },
             },
-        },
-        ngtemplates: {
-            materialAdmin: {
+            ngtemplates: {
+              materialAdmin: {
                 src: ['template/**.html', 'template/**/**.html'],
                 dest: 'js/templates.js',
                 options: {
-                    htmlmin: {
-                        collapseWhitespace: true,
-                        collapseBooleanAttributes: true
-                    }
-                } 
-            }
-        },
-        watch: {
-            styles: {
+                  htmlmin: {
+                    collapseWhitespace: true,
+                    collapseBooleanAttributes: true
+                  }
+                }
+              }
+            },
+            watch: {
+              styles: {
                 files: ['less/**/*.less'], // which files to watch
                 // tasks: ['less', 'csssplit'],
                 tasks: ['less'],
                 options: {
-                    nospawn: true
+                  nospawn: true
                 }
-            },
-            templates: {
+              },
+              templates: {
                 files: ['**/*.html'], // which files to watch
                 tasks: ['ngtemplates'],
                 options: {
-                    nospawn: true
+                  nospawn: true
                 }
+              }
             }
-        }
-    });
+          });
 
     // Load the plugin that provides the "less" task.
     grunt.loadNpmTasks('grunt-contrib-less');
+
+    // We prefer sass
+    grunt.loadNpmTasks('grunt-contrib-sass');
+
     // grunt.loadNpmTasks('grunt-csssplit');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-angular-templates');
@@ -71,5 +86,5 @@ module.exports = function(grunt) {
 
     // Default task(s).
     grunt.registerTask('default', ['less', 'ngtemplates', 'connect:server', 'watch']);
-
-};
+    grunt.registerTask('styles', ['sass']);
+  };

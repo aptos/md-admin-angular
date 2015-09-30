@@ -1,0 +1,305 @@
+//
+// Glyphicons for Bootstrap
+//
+// Since icons are fonts, they can be placed anywhere text is placed and are
+// thus automatically sized to match the surrounding child. To use, create an
+// inline element with the appropriate classes, like so:
+//
+// <a href="#"><span class="glyphicon glyphicon-star"></span> Star</a>
+
+// Import the fonts
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('${icon-font-path}${icon-font-name}.eot');
+  src: url('${icon-font-path}${icon-font-name}.eot?#iefix') format('embedded-opentype'),
+       url('${icon-font-path}${icon-font-name}.woff2') format('woff2'),
+       url('${icon-font-path}${icon-font-name}.woff') format('woff'),
+       url('${icon-font-path}${icon-font-name}.ttf') format('truetype'),
+       url('${icon-font-path}${icon-font-name}.svg#${icon-font-svg-id}') format('svg');
+}
+
+// Catchall baseclass
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Individual icons
+@include glyphicon-asterisk               { &:before { content: "\2a"; } }
+@include glyphicon-plus                   { &:before { content: "\2b"; } }
+.glyphicon-euro,
+@include glyphicon-eur                    { &:before { content: "\20ac"; } }
+@include glyphicon-minus                  { &:before { content: "\2212"; } }
+@include glyphicon-cloud                  { &:before { content: "\2601"; } }
+@include glyphicon-envelope               { &:before { content: "\2709"; } }
+@include glyphicon-pencil                 { &:before { content: "\270f"; } }
+@include glyphicon-glass                  { &:before { content: "\e001"; } }
+@include glyphicon-music                  { &:before { content: "\e002"; } }
+@include glyphicon-search                 { &:before { content: "\e003"; } }
+@include glyphicon-heart                  { &:before { content: "\e005"; } }
+@include glyphicon-star                   { &:before { content: "\e006"; } }
+@include glyphicon-star-empty             { &:before { content: "\e007"; } }
+@include glyphicon-user                   { &:before { content: "\e008"; } }
+@include glyphicon-film                   { &:before { content: "\e009"; } }
+@include glyphicon-th-large               { &:before { content: "\e010"; } }
+@include glyphicon-th                     { &:before { content: "\e011"; } }
+@include glyphicon-th-list                { &:before { content: "\e012"; } }
+@include glyphicon-ok                     { &:before { content: "\e013"; } }
+@include glyphicon-remove                 { &:before { content: "\e014"; } }
+@include glyphicon-zoom-in                { &:before { content: "\e015"; } }
+@include glyphicon-zoom-out               { &:before { content: "\e016"; } }
+@include glyphicon-off                    { &:before { content: "\e017"; } }
+@include glyphicon-signal                 { &:before { content: "\e018"; } }
+@include glyphicon-cog                    { &:before { content: "\e019"; } }
+@include glyphicon-trash                  { &:before { content: "\e020"; } }
+@include glyphicon-home                   { &:before { content: "\e021"; } }
+@include glyphicon-file                   { &:before { content: "\e022"; } }
+@include glyphicon-time                   { &:before { content: "\e023"; } }
+@include glyphicon-road                   { &:before { content: "\e024"; } }
+@include glyphicon-download-alt           { &:before { content: "\e025"; } }
+@include glyphicon-download               { &:before { content: "\e026"; } }
+@include glyphicon-upload                 { &:before { content: "\e027"; } }
+@include glyphicon-inbox                  { &:before { content: "\e028"; } }
+@include glyphicon-play-circle            { &:before { content: "\e029"; } }
+@include glyphicon-repeat                 { &:before { content: "\e030"; } }
+@include glyphicon-refresh                { &:before { content: "\e031"; } }
+@include glyphicon-list-alt               { &:before { content: "\e032"; } }
+@include glyphicon-lock                   { &:before { content: "\e033"; } }
+@include glyphicon-flag                   { &:before { content: "\e034"; } }
+@include glyphicon-headphones             { &:before { content: "\e035"; } }
+@include glyphicon-volume-off             { &:before { content: "\e036"; } }
+@include glyphicon-volume-down            { &:before { content: "\e037"; } }
+@include glyphicon-volume-up              { &:before { content: "\e038"; } }
+@include glyphicon-qrcode                 { &:before { content: "\e039"; } }
+@include glyphicon-barcode                { &:before { content: "\e040"; } }
+@include glyphicon-tag                    { &:before { content: "\e041"; } }
+@include glyphicon-tags                   { &:before { content: "\e042"; } }
+@include glyphicon-book                   { &:before { content: "\e043"; } }
+@include glyphicon-bookmark               { &:before { content: "\e044"; } }
+@include glyphicon-print                  { &:before { content: "\e045"; } }
+@include glyphicon-camera                 { &:before { content: "\e046"; } }
+@include glyphicon-font                   { &:before { content: "\e047"; } }
+@include glyphicon-bold                   { &:before { content: "\e048"; } }
+@include glyphicon-italic                 { &:before { content: "\e049"; } }
+@include glyphicon-text-height            { &:before { content: "\e050"; } }
+@include glyphicon-text-width             { &:before { content: "\e051"; } }
+@include glyphicon-align-left             { &:before { content: "\e052"; } }
+@include glyphicon-align-center           { &:before { content: "\e053"; } }
+@include glyphicon-align-right            { &:before { content: "\e054"; } }
+@include glyphicon-align-justify          { &:before { content: "\e055"; } }
+@include glyphicon-list                   { &:before { content: "\e056"; } }
+@include glyphicon-indent-left            { &:before { content: "\e057"; } }
+@include glyphicon-indent-right           { &:before { content: "\e058"; } }
+@include glyphicon-facetime-video         { &:before { content: "\e059"; } }
+@include glyphicon-picture                { &:before { content: "\e060"; } }
+@include glyphicon-map-marker             { &:before { content: "\e062"; } }
+@include glyphicon-adjust                 { &:before { content: "\e063"; } }
+@include glyphicon-tint                   { &:before { content: "\e064"; } }
+@include glyphicon-edit                   { &:before { content: "\e065"; } }
+@include glyphicon-share                  { &:before { content: "\e066"; } }
+@include glyphicon-check                  { &:before { content: "\e067"; } }
+@include glyphicon-move                   { &:before { content: "\e068"; } }
+@include glyphicon-step-backward          { &:before { content: "\e069"; } }
+@include glyphicon-fast-backward          { &:before { content: "\e070"; } }
+@include glyphicon-backward               { &:before { content: "\e071"; } }
+@include glyphicon-play                   { &:before { content: "\e072"; } }
+@include glyphicon-pause                  { &:before { content: "\e073"; } }
+@include glyphicon-stop                   { &:before { content: "\e074"; } }
+@include glyphicon-forward                { &:before { content: "\e075"; } }
+@include glyphicon-fast-forward           { &:before { content: "\e076"; } }
+@include glyphicon-step-forward           { &:before { content: "\e077"; } }
+@include glyphicon-eject                  { &:before { content: "\e078"; } }
+@include glyphicon-chevron-left           { &:before { content: "\e079"; } }
+@include glyphicon-chevron-right          { &:before { content: "\e080"; } }
+@include glyphicon-plus-sign              { &:before { content: "\e081"; } }
+@include glyphicon-minus-sign             { &:before { content: "\e082"; } }
+@include glyphicon-remove-sign            { &:before { content: "\e083"; } }
+@include glyphicon-ok-sign                { &:before { content: "\e084"; } }
+@include glyphicon-question-sign          { &:before { content: "\e085"; } }
+@include glyphicon-info-sign              { &:before { content: "\e086"; } }
+@include glyphicon-screenshot             { &:before { content: "\e087"; } }
+@include glyphicon-remove-circle          { &:before { content: "\e088"; } }
+@include glyphicon-ok-circle              { &:before { content: "\e089"; } }
+@include glyphicon-ban-circle             { &:before { content: "\e090"; } }
+@include glyphicon-arrow-left             { &:before { content: "\e091"; } }
+@include glyphicon-arrow-right            { &:before { content: "\e092"; } }
+@include glyphicon-arrow-up               { &:before { content: "\e093"; } }
+@include glyphicon-arrow-down             { &:before { content: "\e094"; } }
+@include glyphicon-share-alt              { &:before { content: "\e095"; } }
+@include glyphicon-resize-full            { &:before { content: "\e096"; } }
+@include glyphicon-resize-small           { &:before { content: "\e097"; } }
+@include glyphicon-exclamation-sign       { &:before { content: "\e101"; } }
+@include glyphicon-gift                   { &:before { content: "\e102"; } }
+@include glyphicon-leaf                   { &:before { content: "\e103"; } }
+@include glyphicon-fire                   { &:before { content: "\e104"; } }
+@include glyphicon-eye-open               { &:before { content: "\e105"; } }
+@include glyphicon-eye-close              { &:before { content: "\e106"; } }
+@include glyphicon-warning-sign           { &:before { content: "\e107"; } }
+@include glyphicon-plane                  { &:before { content: "\e108"; } }
+@include glyphicon-calendar               { &:before { content: "\e109"; } }
+@include glyphicon-random                 { &:before { content: "\e110"; } }
+@include glyphicon-comment                { &:before { content: "\e111"; } }
+@include glyphicon-magnet                 { &:before { content: "\e112"; } }
+@include glyphicon-chevron-up             { &:before { content: "\e113"; } }
+@include glyphicon-chevron-down           { &:before { content: "\e114"; } }
+@include glyphicon-retweet                { &:before { content: "\e115"; } }
+@include glyphicon-shopping-cart          { &:before { content: "\e116"; } }
+@include glyphicon-folder-close           { &:before { content: "\e117"; } }
+@include glyphicon-folder-open            { &:before { content: "\e118"; } }
+@include glyphicon-resize-vertical        { &:before { content: "\e119"; } }
+@include glyphicon-resize-horizontal      { &:before { content: "\e120"; } }
+@include glyphicon-hdd                    { &:before { content: "\e121"; } }
+@include glyphicon-bullhorn               { &:before { content: "\e122"; } }
+@include glyphicon-bell                   { &:before { content: "\e123"; } }
+@include glyphicon-certificate            { &:before { content: "\e124"; } }
+@include glyphicon-thumbs-up              { &:before { content: "\e125"; } }
+@include glyphicon-thumbs-down            { &:before { content: "\e126"; } }
+@include glyphicon-hand-right             { &:before { content: "\e127"; } }
+@include glyphicon-hand-left              { &:before { content: "\e128"; } }
+@include glyphicon-hand-up                { &:before { content: "\e129"; } }
+@include glyphicon-hand-down              { &:before { content: "\e130"; } }
+@include glyphicon-circle-arrow-right     { &:before { content: "\e131"; } }
+@include glyphicon-circle-arrow-left      { &:before { content: "\e132"; } }
+@include glyphicon-circle-arrow-up        { &:before { content: "\e133"; } }
+@include glyphicon-circle-arrow-down      { &:before { content: "\e134"; } }
+@include glyphicon-globe                  { &:before { content: "\e135"; } }
+@include glyphicon-wrench                 { &:before { content: "\e136"; } }
+@include glyphicon-tasks                  { &:before { content: "\e137"; } }
+@include glyphicon-filter                 { &:before { content: "\e138"; } }
+@include glyphicon-briefcase              { &:before { content: "\e139"; } }
+@include glyphicon-fullscreen             { &:before { content: "\e140"; } }
+@include glyphicon-dashboard              { &:before { content: "\e141"; } }
+@include glyphicon-paperclip              { &:before { content: "\e142"; } }
+@include glyphicon-heart-empty            { &:before { content: "\e143"; } }
+@include glyphicon-link                   { &:before { content: "\e144"; } }
+@include glyphicon-phone                  { &:before { content: "\e145"; } }
+@include glyphicon-pushpin                { &:before { content: "\e146"; } }
+@include glyphicon-usd                    { &:before { content: "\e148"; } }
+@include glyphicon-gbp                    { &:before { content: "\e149"; } }
+@include glyphicon-sort                   { &:before { content: "\e150"; } }
+@include glyphicon-sort-by-alphabet       { &:before { content: "\e151"; } }
+@include glyphicon-sort-by-alphabet-alt   { &:before { content: "\e152"; } }
+@include glyphicon-sort-by-order          { &:before { content: "\e153"; } }
+@include glyphicon-sort-by-order-alt      { &:before { content: "\e154"; } }
+@include glyphicon-sort-by-attributes     { &:before { content: "\e155"; } }
+@include glyphicon-sort-by-attributes-alt { &:before { content: "\e156"; } }
+@include glyphicon-unchecked              { &:before { content: "\e157"; } }
+@include glyphicon-expand                 { &:before { content: "\e158"; } }
+@include glyphicon-collapse-down          { &:before { content: "\e159"; } }
+@include glyphicon-collapse-up            { &:before { content: "\e160"; } }
+@include glyphicon-log-in                 { &:before { content: "\e161"; } }
+@include glyphicon-flash                  { &:before { content: "\e162"; } }
+@include glyphicon-log-out                { &:before { content: "\e163"; } }
+@include glyphicon-new-window             { &:before { content: "\e164"; } }
+@include glyphicon-record                 { &:before { content: "\e165"; } }
+@include glyphicon-save                   { &:before { content: "\e166"; } }
+@include glyphicon-open                   { &:before { content: "\e167"; } }
+@include glyphicon-saved                  { &:before { content: "\e168"; } }
+@include glyphicon-import                 { &:before { content: "\e169"; } }
+@include glyphicon-export                 { &:before { content: "\e170"; } }
+@include glyphicon-send                   { &:before { content: "\e171"; } }
+@include glyphicon-floppy-disk            { &:before { content: "\e172"; } }
+@include glyphicon-floppy-saved           { &:before { content: "\e173"; } }
+@include glyphicon-floppy-remove          { &:before { content: "\e174"; } }
+@include glyphicon-floppy-save            { &:before { content: "\e175"; } }
+@include glyphicon-floppy-open            { &:before { content: "\e176"; } }
+@include glyphicon-credit-card            { &:before { content: "\e177"; } }
+@include glyphicon-transfer               { &:before { content: "\e178"; } }
+@include glyphicon-cutlery                { &:before { content: "\e179"; } }
+@include glyphicon-header                 { &:before { content: "\e180"; } }
+@include glyphicon-compressed             { &:before { content: "\e181"; } }
+@include glyphicon-earphone               { &:before { content: "\e182"; } }
+@include glyphicon-phone-alt              { &:before { content: "\e183"; } }
+@include glyphicon-tower                  { &:before { content: "\e184"; } }
+@include glyphicon-stats                  { &:before { content: "\e185"; } }
+@include glyphicon-sd-video               { &:before { content: "\e186"; } }
+@include glyphicon-hd-video               { &:before { content: "\e187"; } }
+@include glyphicon-subtitles              { &:before { content: "\e188"; } }
+@include glyphicon-sound-stereo           { &:before { content: "\e189"; } }
+@include glyphicon-sound-dolby            { &:before { content: "\e190"; } }
+@include glyphicon-sound-5-1              { &:before { content: "\e191"; } }
+@include glyphicon-sound-6-1              { &:before { content: "\e192"; } }
+@include glyphicon-sound-7-1              { &:before { content: "\e193"; } }
+@include glyphicon-copyright-mark         { &:before { content: "\e194"; } }
+@include glyphicon-registration-mark      { &:before { content: "\e195"; } }
+@include glyphicon-cloud-download         { &:before { content: "\e197"; } }
+@include glyphicon-cloud-upload           { &:before { content: "\e198"; } }
+@include glyphicon-tree-conifer           { &:before { content: "\e199"; } }
+@include glyphicon-tree-deciduous         { &:before { content: "\e200"; } }
+@include glyphicon-cd                     { &:before { content: "\e201"; } }
+@include glyphicon-save-file              { &:before { content: "\e202"; } }
+@include glyphicon-open-file              { &:before { content: "\e203"; } }
+@include glyphicon-level-up               { &:before { content: "\e204"; } }
+@include glyphicon-copy                   { &:before { content: "\e205"; } }
+@include glyphicon-paste                  { &:before { content: "\e206"; } }
+// The following 2 Glyphicons are omitted for the time being because
+// they currently use Unicode codepoints that are outside the
+// Basic Multilingual Plane (BMP). Older buggy versions of WebKit can't handle
+// non-BMP codepoints in CSS string escapes, and thus can't display these two icons.
+// Notably, the bug affects some older versions of the Android Browser.
+// More info: https://github.com/twbs/bootstrap/issues/10106
+// @include glyphicon-door                   { &:before { content: "\1f6aa"; } }
+// @include glyphicon-key                    { &:before { content: "\1f511"; } }
+@include glyphicon-alert                  { &:before { content: "\e209"; } }
+@include glyphicon-equalizer              { &:before { content: "\e210"; } }
+@include glyphicon-king                   { &:before { content: "\e211"; } }
+@include glyphicon-queen                  { &:before { content: "\e212"; } }
+@include glyphicon-pawn                   { &:before { content: "\e213"; } }
+@include glyphicon-bishop                 { &:before { content: "\e214"; } }
+@include glyphicon-knight                 { &:before { content: "\e215"; } }
+@include glyphicon-baby-formula           { &:before { content: "\e216"; } }
+@include glyphicon-tent                   { &:before { content: "\26fa"; } }
+@include glyphicon-blackboard             { &:before { content: "\e218"; } }
+@include glyphicon-bed                    { &:before { content: "\e219"; } }
+@include glyphicon-apple                  { &:before { content: "\f8ff"; } }
+@include glyphicon-erase                  { &:before { content: "\e221"; } }
+@include glyphicon-hourglass              { &:before { content: "\231b"; } }
+@include glyphicon-lamp                   { &:before { content: "\e223"; } }
+@include glyphicon-duplicate              { &:before { content: "\e224"; } }
+@include glyphicon-piggy-bank             { &:before { content: "\e225"; } }
+@include glyphicon-scissors               { &:before { content: "\e226"; } }
+@include glyphicon-bitcoin                { &:before { content: "\e227"; } }
+@include glyphicon-btc                    { &:before { content: "\e227"; } }
+@include glyphicon-xbt                    { &:before { content: "\e227"; } }
+@include glyphicon-yen                    { &:before { content: "\00a5"; } }
+@include glyphicon-jpy                    { &:before { content: "\00a5"; } }
+@include glyphicon-ruble                  { &:before { content: "\20bd"; } }
+@include glyphicon-rub                    { &:before { content: "\20bd"; } }
+@include glyphicon-scale                  { &:before { content: "\e230"; } }
+@include glyphicon-ice-lolly              { &:before { content: "\e231"; } }
+@include glyphicon-ice-lolly-tasted       { &:before { content: "\e232"; } }
+@include glyphicon-education              { &:before { content: "\e233"; } }
+@include glyphicon-option-horizontal      { &:before { content: "\e234"; } }
+@include glyphicon-option-vertical        { &:before { content: "\e235"; } }
+@include glyphicon-menu-hamburger         { &:before { content: "\e236"; } }
+@include glyphicon-modal-window           { &:before { content: "\e237"; } }
+@include glyphicon-oil                    { &:before { content: "\e238"; } }
+@include glyphicon-grain                  { &:before { content: "\e239"; } }
+@include glyphicon-sunglasses             { &:before { content: "\e240"; } }
+@include glyphicon-text-size              { &:before { content: "\e241"; } }
+@include glyphicon-text-color             { &:before { content: "\e242"; } }
+@include glyphicon-text-background        { &:before { content: "\e243"; } }
+@include glyphicon-object-align-top       { &:before { content: "\e244"; } }
+@include glyphicon-object-align-bottom    { &:before { content: "\e245"; } }
+@include glyphicon-object-align-horizontal{ &:before { content: "\e246"; } }
+@include glyphicon-object-align-left      { &:before { content: "\e247"; } }
+@include glyphicon-object-align-vertical  { &:before { content: "\e248"; } }
+@include glyphicon-object-align-right     { &:before { content: "\e249"; } }
+@include glyphicon-triangle-right         { &:before { content: "\e250"; } }
+@include glyphicon-triangle-left          { &:before { content: "\e251"; } }
+@include glyphicon-triangle-bottom        { &:before { content: "\e252"; } }
+@include glyphicon-triangle-top           { &:before { content: "\e253"; } }
+@include glyphicon-console                { &:before { content: "\e254"; } }
+@include glyphicon-superscript            { &:before { content: "\e255"; } }
+@include glyphicon-subscript              { &:before { content: "\e256"; } }
+@include glyphicon-menu-left              { &:before { content: "\e257"; } }
+@include glyphicon-menu-right             { &:before { content: "\e258"; } }
+@include glyphicon-menu-down              { &:before { content: "\e259"; } }
+@include glyphicon-menu-up                { &:before { content: "\e260"; } }
